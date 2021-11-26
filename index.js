@@ -41,7 +41,7 @@ app.get('/', async (req, res) => {
             .replace('__META_OG_IMAGE__', image)
     
         } catch (e) {
-            return res.send('Unable to retrieve photos. Reason: ' + e.toString())
+            return res.send(e)
         }
 
         return res.send(htmlData);
